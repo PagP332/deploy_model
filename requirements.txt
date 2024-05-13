@@ -4,3 +4,4 @@ numpy
 tensorflow
 googledrivedownloader
 opencv-python-headless
+pillow
