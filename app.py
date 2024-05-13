@@ -26,12 +26,12 @@ def import_and_predict(image_data, model):
         size = (150,150)    
         image = ImageOps.fit(image_data, size)
         image = np.asarray(image)
-        img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        #img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
         
-        img_reshape = img[np.newaxis,...]
+        #img_reshape = img[np.newaxis,...]
     
-        prediction = model.predict(img_reshape)
+        prediction = model.predict(image)
         
         return prediction
 if file is None:
