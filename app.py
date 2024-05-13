@@ -1,11 +1,15 @@
 import streamlit as st
 import tensorflow as tf
 import streamlit as st
+from google_drive_downloader import GoogleDriveDownloader as gdd
+
 
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model=tf.keras.models.load_model('/content/drive/MyDrive/CPE019/IntelImage/deploy_cnn.best.hdf5')
+  gdd.download_file_from_google_drive(file_id='19I0Q5zASzFaSlWgkXO0N5ZqJ3fqfkwFC',
+                                    dest_path='./data/deploy_cnn.best.hdf5')
+  model=tf.keras.models.load_model('./data/deploy_cnn.best.hdf5')
   return model
 with st.spinner('Model is being loaded..'):
   model=load_model()
