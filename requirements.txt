@@ -2,4 +2,4 @@ pandas
 streamlit
 numpy
 tensorflow
-google_drive_downloader
+googledrivedownloader
