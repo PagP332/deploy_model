@@ -39,7 +39,8 @@ if file is None:
 else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
-    predictions = import_and_predict(image, model)
+    #predictions = import_and_predict(image, model)
+    prediction = model.predict(image)
     score = tf.nn.softmax(predictions[0])
     st.write(prediction)
     st.write(score)
