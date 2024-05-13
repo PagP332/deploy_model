@@ -12,11 +12,11 @@ with st.spinner('Model is being loaded..'):
   model=load_model()
 
 st.write("""
-         # Flower Classification
+         # Intel Image Classification
          """
          )
 
-file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
+file = st.file_uploader("Please upload a 150x150 image file (PNG or JPG only)", type=["jpg", "png"])
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
