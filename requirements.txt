@@ -3,4 +3,4 @@ streamlit
 numpy
 tensorflow
 googledrivedownloader
-cv2
+opencv-python
