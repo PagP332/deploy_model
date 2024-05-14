@@ -23,7 +23,7 @@ def import_and_predict(image_data, model):
         prediction = model.predict(img)
         return prediction
 
-columns = ['mountain', 'street', 'glacier', 'buildings', 'sea', 'forest']
+columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
   model=load_model()
 
