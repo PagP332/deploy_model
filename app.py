@@ -37,13 +37,13 @@ columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
   model=load_model()
 
+st.write("Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Katherine May")
 display_images()
 st.write("""
-         Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Katherine May
          # Intel Image Classification
          A demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
          from a Datahack challenge by Intel
-         Upload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest.
+         \nUpload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest.
          """
          )
 
