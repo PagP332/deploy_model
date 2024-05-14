@@ -38,7 +38,7 @@ if file is None:
     st.text("Please upload an image file")
 else:
     image = Image.open(file)
-    st.image(image, use_column_width=True)
+    st.image(image, width = image.size[0]*2)
     prediction = import_and_predict(image, model)
     #prediction = model.predict(image)
     score = tf.nn.softmax(prediction[0])
