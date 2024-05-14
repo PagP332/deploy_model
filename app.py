@@ -41,7 +41,7 @@ st.write("Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Kather
 display_images()
 st.write("""
          # Intel Image Classification
-         A demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
+         \nA demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
          from a Datahack challenge by Intel
          \nUpload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest.
          """
