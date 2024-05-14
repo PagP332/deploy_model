@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import streamlit as st
 import cv2
+import glob
 from PIL import Image, ImageOps
 import numpy as np
 
@@ -22,10 +23,15 @@ def import_and_predict(image_data, model):
         prediction = model.predict(img)
         return prediction
 
+def display_images():
+  images = [Image.open(file) for file in glob.glob("display/*.jpg")]
+  st.image(image, width = 50)
+
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
   model=load_model()
 
+display_images()
 st.write("""
          # Intel Image Classification
          \n A demonstration on a Predictive Convolutional Neural Network that uses image of natural scenes
