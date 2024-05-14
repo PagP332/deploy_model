@@ -12,8 +12,8 @@ def import_and_predict(image_data, model):
     
         size = (150,150)    
         image = ImageOps.fit(image_data, size)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        img = np.asarray(image, dtype = 'float32')
+        image = np.asarray(image, dtype = 'float32')
+        img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         img = img / 255
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
         
