@@ -29,9 +29,9 @@ def display_images():
   row_size = len(images)
   grid = st.columns(row_size)
   col = 0
-  for image in row_size:
+  for image in images:
       with grid[col]:
-          st.image(images[image.index])
+          st.image(image)
       col = (col + 1) % row_size
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
