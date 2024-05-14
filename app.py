@@ -26,9 +26,10 @@ def import_and_predict(image_data, model):
 def display_images():
   images = [Image.open(file) for file in glob.glob("display/*.jpg")]
   st.image(images[0], width = 50)
+  row_size = images.size
   grid = st.columns(row_size)
   col = 0
-  for image in images.size:
+  for image in row_size:
       with grid[col]:
           st.image(images[image.index])
       col = (col + 1) % row_size
