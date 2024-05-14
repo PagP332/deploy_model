@@ -38,7 +38,7 @@ if file is None:
 else:
     size = (150,150)  
     image = Image.open(file)
-    image = ImageOps.fit(image_data, size)
+    image = ImageOps.fit(image, size)
     st.image(image, width = image.size[0]*2)
     prediction = import_and_predict(image, model)
     #prediction = model.predict(image)
