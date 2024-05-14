@@ -25,7 +25,7 @@ def import_and_predict(image_data, model):
 
 def display_images():
   images = [Image.open(file) for file in glob.glob("display/*.jpg")]
-  st.image(image, width = 50)
+  st.image(images[0], width = 50)
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
