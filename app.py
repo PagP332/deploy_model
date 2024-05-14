@@ -41,8 +41,8 @@ st.write("Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Kather
 display_images()
 st.write("""
          # Intel Image Classification
-         \nA demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
-         from a Datahack challenge by Intel
+         \nA demonstration on a Predictive Convolutional Neural Network with a 66% accuracy that uses
+         images of natural scenes from a Datahack challenge by Intel.
          """
          )
 
