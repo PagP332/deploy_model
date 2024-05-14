@@ -39,9 +39,10 @@ with st.spinner('Model is being loaded..'):
 
 display_images()
 st.write("""
-         # Intel Image Classification
          \n Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Katherine May
-         \n\n A demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
+         \n# Intel Image Classification
+         
+         \n A demonstration on a Predictive Convolutional Neural Network that uses images of natural scenes
          from a Datahack challenge by Intel
          \n Upload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest.
          """
