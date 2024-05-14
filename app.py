@@ -44,7 +44,5 @@ else:
     score = tf.nn.softmax(prediction[0])
     st.write(prediction)
     st.write(score)
-    print(
-    "This image most likely belongs to {} with a {:.2f} percent confidence."
-    .format(columns[np.argmax(score)], 100 * np.max(score))
+    print("This image most likely belongs to {} with a {:.2f} percent confidence.".format(columns[np.argmax(score)], 100 * np.max(score)))
 )
