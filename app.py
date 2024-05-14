@@ -46,7 +46,7 @@ st.write("""
          """
          )
 
-file = st.file_uploader("Upload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest. (PNG or JPG only)", type=["jpg", "png"])
+file = st.file_uploader("Upload images that either classify as an image of a mountain, street, glacier, building, sea, or a forest (PNG or JPG only)", type=["jpg", "png"])
 st.set_option('deprecation.showfileUploaderEncoding', False)
 if file is None:
     st.text("Please upload an image file")
