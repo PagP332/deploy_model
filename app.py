@@ -30,7 +30,7 @@ def display_images():
   col = 0
   for image in images:
       with grid[col]:
-          st.image(image, width = image.size[0] * 1.5)
+          st.image(image)
       col = (col + 1) % row_size
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
