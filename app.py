@@ -6,14 +6,12 @@ from PIL import Image, ImageOps
 import numpy as np
 
 @st.cache(allow_output_mutation=True)
-size = (150,150)  
-
 def load_model():
   model=tf.keras.models.load_model('deploy_cnn.best.hdf5')
   return model
 
+size = (150,150)  
 def import_and_predict(image_data, model):
-          
         image = ImageOps.fit(image_data, size)
         image = np.asarray(image, dtype = 'float32')
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
