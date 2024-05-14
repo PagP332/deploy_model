@@ -25,13 +25,12 @@ def import_and_predict(image_data, model):
 
 def display_images():
   images = [Image.open(file) for file in glob.glob("display/*.jpg")]
-  st.image(images[0], width = 50)
   row_size = len(images)
   grid = st.columns(row_size)
   col = 0
   for image in images:
       with grid[col]:
-          st.image(image)
+          st.image(image, width = image.size[0] * 1.5)
       col = (col + 1) % row_size
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
