@@ -17,9 +17,9 @@ def import_and_predict(image_data, model):
         img = img / 255
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
         
-        img_reshape = img[np.newaxis,...]
+        #img_reshape = img[np.newaxis,...]
     
-        prediction = model.predict(img_reshape)
+        prediction = model.predict(img)
         
         return prediction
 with st.spinner('Model is being loaded..'):
