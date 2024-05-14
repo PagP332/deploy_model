@@ -1,15 +1,17 @@
 import streamlit as st
 import tensorflow as tf
 import streamlit as st
-
-
+import cv2
+from PIL import Image, ImageOps
+import numpy as np
 
 @st.cache(allow_output_mutation=True)
+
 def load_model():
   model=tf.keras.models.load_model('deploy_cnn.best.hdf5')
   return model
+
 def import_and_predict(image_data, model):
-    
         size = (150,150)    
         image = ImageOps.fit(image_data, size)
         image = np.asarray(image, dtype = 'float32')
@@ -18,13 +20,12 @@ def import_and_predict(image_data, model):
         img = img / 255
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
         #img_reshape = img[np.newaxis,...]
-    
         prediction = model.predict(img)
-        
         return prediction
+
+
 with st.spinner('Model is being loaded..'):
   model=load_model()
-  st.write("Model loaded")
 
 st.write("""
          # Intel Image Classification
@@ -32,9 +33,6 @@ st.write("""
          )
 
 file = st.file_uploader("Please upload a 150x150 image file (PNG or JPG only)", type=["jpg", "png"])
-import cv2
-from PIL import Image, ImageOps
-import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 if file is None:
     st.text("Please upload an image file")
