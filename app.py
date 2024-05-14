@@ -14,9 +14,9 @@ def import_and_predict(image_data, model):
         image = ImageOps.fit(image_data, size)
         image = np.asarray(image, dtype = 'float32')
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        img = img.reshape(1, (size), 3)
         img = img / 255
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
-        st.write(img)
         #img_reshape = img[np.newaxis,...]
     
         prediction = model.predict(img)
