@@ -41,7 +41,7 @@ else:
     st.image(image, use_column_width=True)
     prediction = import_and_predict(image, model)
     #prediction = model.predict(image)
-    score = tf.nn.softmax(predictions[0])
+    score = tf.nn.softmax(prediction[0])
     st.write(prediction)
     st.write(score)
     print(
