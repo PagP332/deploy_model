@@ -24,6 +24,7 @@ def import_and_predict(image_data, model):
         return prediction
 with st.spinner('Model is being loaded..'):
   model=load_model()
+  st.write("Model loaded")
 
 st.write("""
          # Intel Image Classification
