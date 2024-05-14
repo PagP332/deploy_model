@@ -10,8 +10,8 @@ def load_model():
   model=tf.keras.models.load_model('deploy_cnn.best.hdf5')
   return model
 
-size = (150,150)  
 def import_and_predict(image_data, model):
+        size = (150,150)  
         image = ImageOps.fit(image_data, size)
         image = np.asarray(image, dtype = 'float32')
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -36,6 +36,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 if file is None:
     st.text("Please upload an image file")
 else:
+    size = (150,150)  
     image = Image.open(file)
     image = ImageOps.fit(image_data, size)
     st.image(image, width = image.size[0]*2)
