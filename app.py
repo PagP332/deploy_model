@@ -32,7 +32,7 @@ def display_images():
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
-  model=
+  model=load_model()
 
 st.write("Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Katherine May")
 display_images()
