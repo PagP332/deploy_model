@@ -7,6 +7,9 @@ from PIL import Image, ImageOps
 import numpy as np
 
 @st.cache(allow_output_mutation=True)
+def load_model():
+        return tf.keras.models.load_model('deploy_cnn.best.hdf5')
+        
 def import_and_predict(image_data, model):
         size = (150,150)  
         image = ImageOps.fit(image_data, size)
@@ -29,7 +32,7 @@ def display_images():
 
 columns = ['mountain', 'street', 'glacier', 'building', 'sea', 'forest']
 with st.spinner('Model is being loaded..'):
-  model=tf.keras.models.load_model('deploy_cnn.best.hdf5')
+  model=
 
 st.write("Emerging Technologies 2 by Pagatpat, Paul Gabriel and Dalangan, Katherine May")
 display_images()
